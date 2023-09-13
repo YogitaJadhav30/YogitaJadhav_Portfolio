@@ -27,13 +27,15 @@
       </li>
     
     </ul>
+    <h5 style="color:white;margin-left:50px;">Welcome, {{ user }}</h5>
     <form class="navbar-form navbar" action="/action_page.php">
       <div class="form-group">
         <input type="text" class="form-control" placeholder="Search" name="search">
-      </div>&nbsp;&nbsp;
+      </div>&nbsp;
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-  </div>
+    
+    <a href="{% url 'dashboard:logout' %}"><button type="button" class="btn btn-danger">Logout</button> </a></div>
 </nav><br>
 <center><h1>Received Messages</h1></center>
 {% block contacts %}
@@ -41,9 +43,7 @@
 
 
 
-<footer class="py-3 bg-grey">
-  <p class="m-0 text-dark text-center ">Copyright &copy; Django Central</p>
-</footer>
+
 
 
 
